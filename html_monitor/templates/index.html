@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTMLMonitor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='socket.io.js') }}"></script>
+    <script src="{{ url_for('static', filename='echarts.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='dark.js') }}"></script>
+</head>
+<body>
+    {{ logout|safe }}
+    <h1>Monitor</h1>
+    <div id="CPU"></div>
+    <div id="Mem"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='charts.js') }}"></script>
+    <hr>
+    <p>Powered by HTMLMonitor<br><small>Version: {{ ver }}  UI version: 1.0.1</small></p>
+</body>
+</html>
